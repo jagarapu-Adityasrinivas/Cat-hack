@@ -88,7 +88,7 @@ public class StatesAndCapitalsQuiz {
         int numQuestions = scanner.nextInt();
         System.out.print("How many students will attempt the quiz? ");
         int numStudents = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline character
+        scanner.nextLine(); 
 
         conductQuiz(numQuestions, numStudents);
     }
