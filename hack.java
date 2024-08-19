@@ -37,7 +37,7 @@ public class StatesAndCapitalsQuiz {
     public static void conductQuiz(int numQuestions, int numStudents) {
         List<String> states = new ArrayList<>(statesAndCapitals.keySet());
         Scanner scanner = new Scanner(System.in);
-        int[] scores = new int[numStudents]; // Array to store scores of each student
+        int[] scores = new int[numStudents]; 
 
         for (int student = 0; student < numStudents; student++) {
             System.out.println("\nStudent " + (student + 1) + "'s turn:");
@@ -57,11 +57,11 @@ public class StatesAndCapitalsQuiz {
                 }
             }
 
-            scores[student] = score; // Store the score for the current student
+            scores[student] = score; 
             System.out.println("Quiz completed for Student " + (student + 1) + "! Your score: " + score + "/" + numQuestions);
         }
 
-        // Determine the winner
+        
         int highestScore = -1;
         List<Integer> winners = new ArrayList<>();
 
@@ -69,9 +69,9 @@ public class StatesAndCapitalsQuiz {
             if (scores[i] > highestScore) {
                 highestScore = scores[i];
                 winners.clear();
-                winners.add(i + 1); // Store student number (1-based index)
+                winners.add(i + 1); 
             } else if (scores[i] == highestScore) {
-                winners.add(i + 1); // Add to winners if there's a tie
+                winners.add(i + 1); 
             }
         }
 
